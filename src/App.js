@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Header from "./header";
+import Modal from "./Modal";
 
 const App = () => {
-  return <Header />;
+  const [intialModal, setModal] = useState(false);
+  return (
+    <>
+      <Header setModal={setModal} />
+      {intialModal && <Modal setModal={setModal} />}
+    </>
+  );
 };
 
 export default App;

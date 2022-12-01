@@ -1,20 +1,22 @@
 import React from "react";
 import "./styles.css";
 
-const Header = () => {
+const Header = ({ setModal }) => {
+  const openModal = (event) => {
+    event.preventDefault();
+    setModal(true);
+  };
   return (
-    <header class="header">
-      <h1>Redux Auth</h1>
-      <nav>
-        <ul>
+    <header>
+      <nav class="header">
+        <ul class="navClass">
           <li>
-            <a href="/">My Products</a>
+            <a href="/">Home</a>
           </li>
           <li>
-            <a href="/">My Sales</a>
-          </li>
-          <li>
-            <button>Logout</button>
+            <a href="/" onClick={openModal}>
+              Open modal
+            </a>
           </li>
         </ul>
       </nav>
