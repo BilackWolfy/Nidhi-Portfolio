@@ -1,16 +1,14 @@
-import React, { useRef, useState } from "react";
+/* eslint-disable react/no-unescaped-entities */
+import React, { useState } from "react";
 import './main.scss'
 import './utility.scss'
-import panda from '../img/finaldone.png' //done
-import panda2 from '../img/nidhiSecondsecond.jpg' //done
+import panda from '../img/finaldone.png'
+import panda2 from '../img/nidhiSecondsecond.jpg'
 import portfolioOne from '../img/portfolio_one.jpg'
 import portfolioTwo from '../img/portfolio_two.png'
 import portfolioThree from '../img/portfolio_three.jpg'
 import portfolioFour from '../img/portfolio_four.png'
-import portfolioFive from '../img/portfolio_five.jpg'
 import portfolioSix from '../img/portfolio_six.jpg'
-import NidhiSVG from '../img/NidhiMain.svg'
-import contently from '../img/contently.jpg'
 import storyboardOne from '../img/storyboardOne.png'
 import storyboardTwo from '../img/storyboardTwo.png'
 import storyboardThree from '../img/storyboardThree.png'
@@ -32,22 +30,21 @@ import portfolioAssSix from '../img/portasSix.png'
 import portfolioAssSeven from '../img/portasSeven.png'
 import portfolioAssEight from '../img/portasEight.png'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y, EffectFade, EffectCards } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 // Import Swiper styles
 import 'swiper/css';
-import ReactPlayer from "react-player";
 
 const Intro = () => {
     return <div className="intro container" id="homeID">
         <div className="mainSection grid">
             <section className="icons flex">
-                <i class="fa-brands fa-linkedin-in fa-2x"></i>
-                <i class="fa-brands fa-facebook fa-2x" ></i>
-                <i class="fa-brands fa-instagram fa-2x" ></i>
+                <i className="fa-brands fa-linkedin-in fa-2x"></i>
+                <i className="fa-brands fa-facebook fa-2x" ></i>
+                <i className="fa-brands fa-instagram fa-2x" ></i>
             </section>
             <section className="portfolio flex">
                 <div className="info flex">
@@ -58,9 +55,9 @@ const Intro = () => {
                         <a href="" className="pd-y">Contact Me</a>
                     </div>
                     <div className="flex scroll" onClick={() => window.scrollBy(0, 700)} >
-                        <i class="fa-solid fa-computer-mouse fa-2x" ></i>
+                        <i className="fa-solid fa-computer-mouse fa-2x" ></i>
                         <p>Scroll down</p>
-                        <i class="fa-solid fa-arrow-down" onClick={() => window.scrollBy(0, 700)}></i>
+                        <i className="fa-solid fa-arrow-down" onClick={() => window.scrollBy(0, 700)}></i>
                     </div>
                 </div>
                 <div className="pic">
@@ -101,31 +98,31 @@ const Skills = () => {
     const collapsibleItem = () => {
         return (
             <div className="content">
-                <div class="w3-light-grey w3-round-xlarge">
+                <div className="w3-light-grey w3-round-xlarge">
                     <div className="content-detail">
                         <div className="flex">
                             <p>Figma</p>
                             <p>75%</p>
                         </div>
-                        <div class="w3-container w3-blue w3-round-xlarge" style={{ width: '75%' }} />
+                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '75%' }} />
                     </div>
                 </div>
-                <div class="w3-light-grey w3-round-xlarge">
+                <div className="w3-light-grey w3-round-xlarge">
                     <div className="content-detail">
                         <div className="flex">
                             <p>Figma</p>
                             <p>75%</p>
                         </div>
-                        <div class="w3-container w3-blue w3-round-xlarge" style={{ width: '75%' }} />
+                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '75%' }} />
                     </div>
                 </div>
-                <div class="w3-light-grey w3-round-xlarge">
+                <div className="w3-light-grey w3-round-xlarge">
                     <div className="content-detail">
                         <div className="flex">
                             <p>Figma</p>
                             <p>75%</p>
                         </div>
-                        <div class="w3-container w3-blue w3-round-xlarge" style={{ width: '75%' }} />
+                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '75%' }} />
                     </div>
                 </div>
             </div>
@@ -143,27 +140,27 @@ const Skills = () => {
                         <div className="skill grid">
                             <div className="skill-name">
                                 <div className="flex">
-                                    <i class="fa-solid fa-swatchbook fa-lg"></i>
+                                    <i className="fa-solid fa-swatchbook fa-lg"></i>
                                     <div className="skill-summary">
                                         <p className="skill-heading">Skill #1</p>
                                         <p className="skill-exp">More than 2 years</p>
                                     </div>
                                 </div>
                             </div>
-                            <i class="fa-solid fa-angle-down collapsible" onClick={(event) => handleCollapsible(event, 'first')}></i>
+                            <i className="fa-solid fa-angle-down collapsible" onClick={(event) => handleCollapsible(event, 'first')}></i>
                             {collapsibleItem()}
                         </div>
                         <div className="skill grid">
                             <div className="skill-name">
                                 <div className="flex">
-                                    <i class="fa-solid fa-swatchbook fa-lg"></i>
+                                    <i className="fa-solid fa-swatchbook fa-lg"></i>
                                     <div className="skill-summary">
                                         <p className="skill-heading">Skill #1</p>
                                         <p className="skill-exp">More than 2 years</p>
                                     </div>
                                 </div>
                             </div>
-                            <i class="fa-solid fa-angle-down collapsible" onClick={(event) => handleCollapsible(event, 'second')}></i>
+                            <i className="fa-solid fa-angle-down collapsible" onClick={(event) => handleCollapsible(event, 'second')}></i>
                             {collapsibleItem()}
                         </div>
                     </div>
@@ -171,14 +168,14 @@ const Skills = () => {
                         <div className="skill grid">
                             <div className="skill-name">
                                 <div className="flex">
-                                    <i class="fa-solid fa-swatchbook fa-lg"></i>
+                                    <i className="fa-solid fa-swatchbook fa-lg"></i>
                                     <div className="skill-summary">
                                         <p className="skill-heading">Skill #1</p>
                                         <p className="skill-exp">More than 2 years</p>
                                     </div>
                                 </div>
                             </div>
-                            <i class="fa-solid fa-angle-down collapsible" onClick={(event) => handleCollapsible(event, 'third')}></i>
+                            <i className="fa-solid fa-angle-down collapsible" onClick={(event) => handleCollapsible(event, 'third')}></i>
                             {collapsibleItem()}
                         </div>
                     </div>
@@ -206,26 +203,26 @@ const Portfolio = () => {
 
     const educationTimeline = () => {
         return (
-            <div class="timeline">
-                <div class="container left">
-                    <div class="content">
+            <div className="timeline">
+                <div className="container left">
+                    <div className="content">
                         <h3>Bachelor of Technology</h3>
                         <p className="uni">Kurukshetra University</p>
-                        <p className="year"><i class="fa-solid fa-calendar-days"></i> 2018 - 2012</p>
+                        <p className="year"><i className="fa-solid fa-calendar-days"></i> 2018 - 2012</p>
                     </div>
                 </div>
-                <div class="container right">
-                    <div class="content">
+                <div className="container right">
+                    <div className="content">
                         <h3>Master of Technology</h3>
                         <p className="uni">Kurukshetra University</p>
-                        <p className="year"><i class="fa-solid fa-calendar-days"></i> 2012 - 2014</p>
+                        <p className="year"><i className="fa-solid fa-calendar-days"></i> 2012 - 2014</p>
                     </div>
                 </div>
-                <div class="container left">
-                    <div class="content">
+                <div className="container left">
+                    <div className="content">
                         <h3>Bachelor of Education</h3>
                         <p className="uni">Kurukshetra University</p>
-                        <p className="year"><i class="fa-solid fa-calendar-days"></i> 2020 - 2022</p>
+                        <p className="year"><i className="fa-solid fa-calendar-days"></i> 2020 - 2022</p>
                     </div>
                 </div>
             </div>
@@ -235,47 +232,47 @@ const Portfolio = () => {
 
     const workTimeline = () => {
         return (
-            <div class="timeline">
-                <div class="container left">
-                    <div class="content">
+            <div className="timeline">
+                <div className="container left">
+                    <div className="content">
                         <h3>Lead Instructional Designer</h3>
                         <p className="uni">LearningMate Solutions</p>
-                        <p className="year"><i class="fa-solid fa-calendar-days"></i> 2022 - 2023</p>
+                        <p className="year"><i className="fa-solid fa-calendar-days"></i> 2022 - 2023</p>
                     </div>
                 </div>
-                <div class="container right">
-                    <div class="content">
+                <div className="container right">
+                    <div className="content">
                         <h3>Learning Experience Designer</h3>
                         <p className="uni">StayQrious</p>
-                        <p className="year"><i class="fa-solid fa-calendar-days"></i> 2020 - 2022</p>
+                        <p className="year"><i className="fa-solid fa-calendar-days"></i> 2020 - 2022</p>
                     </div>
                 </div>
-                <div class="container left">
-                    <div class="content">
+                <div className="container left">
+                    <div className="content">
                         <h3>International Tutor</h3>
                         <p className="uni">Questmath International</p>
-                        <p className="year"><i class="fa-solid fa-calendar-days"></i> 2019 - 2020</p>
+                        <p className="year"><i className="fa-solid fa-calendar-days"></i> 2019 - 2020</p>
                     </div>
                 </div>
-                <div class="container right">
-                    <div class="content">
+                <div className="container right">
+                    <div className="content">
                         <h3>Instructional Designer</h3>
                         <p className="uni">Unacademy</p>
-                        <p className="year"><i class="fa-solid fa-calendar-days"></i> 2018 - 2019</p>
+                        <p className="year"><i className="fa-solid fa-calendar-days"></i> 2018 - 2019</p>
                     </div>
                 </div>
-                <div class="container left">
-                    <div class="content">
+                <div className="container left">
+                    <div className="content">
                         <h3>Assistant Professor</h3>
                         <p className="uni">M.L.N College</p>
-                        <p className="year"><i class="fa-solid fa-calendar-days"></i> 2017 - 2019</p>
+                        <p className="year"><i className="fa-solid fa-calendar-days"></i> 2017 - 2019</p>
                     </div>
                 </div>
-                <div class="container right">
-                    <div class="content">
+                <div className="container right">
+                    <div className="content">
                         <h3>Maths | Physics Teacher</h3>
                         <p className="uni">S.N.P School</p>
-                        <p className="year"><i class="fa-solid fa-calendar-days"></i> 2015 - 2017</p>
+                        <p className="year"><i className="fa-solid fa-calendar-days"></i> 2015 - 2017</p>
                     </div>
                 </div>
             </div>
@@ -291,8 +288,8 @@ const Portfolio = () => {
                 </div>
                 <div className="qualification-timeline grid">
                     <div className="qualification-title flex">
-                        <div className={`edu ${eduction ? 'colored' : ''}`} onClick={() => handleEducation()} > <i class="fa-solid fa-graduation-cap fa-lg"></i>Education</div>
-                        <div className={`work ${work ? 'colored' : ''}`} onClick={() => handleWork()}><i class="fa-solid fa-briefcase fa-lg"></i>Work</div>
+                        <div className={`edu ${eduction ? 'colored' : ''}`} onClick={() => handleEducation()} > <i className="fa-solid fa-graduation-cap fa-lg"></i>Education</div>
+                        <div className={`work ${work ? 'colored' : ''}`} onClick={() => handleWork()}><i className="fa-solid fa-briefcase fa-lg"></i>Work</div>
                     </div>
                     {
                         eduction && (
@@ -322,7 +319,7 @@ const Portfolio = () => {
                         <div className="portfolio-data">
                             <h3 className="portfolio-title">{heading}</h3>
                             <p className="portfolio-description">{desc}</p>
-                            <a href={link} className="button" target='_blank' >Demo</a>
+                            <a href={link} className="button" target='_blank' rel="noreferrer" >Demo</a>
                         </div>
                     </div >
                 </div>
@@ -338,7 +335,7 @@ const Portfolio = () => {
                 <Swiper className=" portfolio-container "
 
                     loop={true}
-                    modules={[Navigation, Pagination, Scrollbar, A11y]}
+                    modules={[Navigation, Pagination, Scrollbar]}
                     slidesPerView={1}
                     navigation
                     pagination={{ clickable: true }}
@@ -433,7 +430,7 @@ const Portfolio = () => {
     }
 
     const PortfolioVideos = () => {
-        const PlayIcon = () => (<i class="fa-regular fa-circle-play fa-3x videoIcon"></i>);
+        const PlayIcon = () => (<i className="fa-regular fa-circle-play fa-3x videoIcon"></i>);
         return (
             <section className="container portfolioVideos flex">
                 <div className="portfolioVideosHeading flex">
@@ -597,15 +594,15 @@ const Portfolio = () => {
                         </p>
                         <div className="about-exp-details flex">
                             <div>
-                                <p>08<i class="fa-solid fa-plus fa-xs"></i></p>
+                                <p>08<i className="fa-solid fa-plus fa-xs"></i></p>
                                 <p>Years experience</p>
                             </div>
                             <div>
-                                <p>08<i class="fa-solid fa-plus fa-xs"></i></p>
+                                <p>08<i className="fa-solid fa-plus fa-xs"></i></p>
                                 <p>Years experience</p>
                             </div>
                             <div>
-                                <p>08<i class="fa-solid fa-plus fa-xs"></i></p>
+                                <p>08<i className="fa-solid fa-plus fa-xs"></i></p>
                                 <p>Years experience</p>
                             </div>
                         </div>
@@ -633,9 +630,9 @@ const Portfolio = () => {
                             <li onClick={navPortfolio}><h3>Portfolio</h3></li>
                         </ul>
                         <div className="icons flex">
-                            <i class="fa-brands fa-linkedin-in fa-1x"></i>
-                            <i class="fa-brands fa-facebook fa-1x" ></i>
-                            <i class="fa-brands fa-instagram fa-1x" ></i>
+                            <i className="fa-brands fa-linkedin-in fa-1x"></i>
+                            <i className="fa-brands fa-facebook fa-1x" ></i>
+                            <i className="fa-brands fa-instagram fa-1x" ></i>
                         </div>
                     </div>
                 </div>
