@@ -1,0 +1,22 @@
+.flex {
+    display: flex;
+    // flex-direction: row;
+    // align-items: center;
+    // justify-content: center;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+.grid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.pd-y {
+    padding-bottom: 10px;
+}
