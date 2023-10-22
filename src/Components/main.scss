@@ -1068,11 +1068,9 @@ $button-color: #5656a7;
 }
 
 .mainFooter {
-    height: 50px;
-
     .hamburgerContainer {
         display: none;
-        height: 100%;
+
 
         .hamburger {
             z-index: 2000;
@@ -1430,7 +1428,7 @@ $button-color: #5656a7;
     }
 
     .asses {
-        margin-bottom: 30px !important;
+        margin-bottom: 50px !important;
 
         .assesContainer {
             .assesments {
@@ -1454,7 +1452,7 @@ $button-color: #5656a7;
         .hamburgerContainer {
             position: relative;
             display: block !important;
-            height: 100%;
+            min-height: auto;
             width: 100%;
             background-color: #f2f7f7;
             align-content: center;
@@ -1485,6 +1483,7 @@ $button-color: #5656a7;
             .hamburgerContent {
                 padding: 0px 10px;
                 height: 90%;
+                height: 55px;
                 justify-content: space-between;
                 align-items: center;
 
@@ -1550,6 +1549,10 @@ $button-color: #5656a7;
                 i {
                     margin-bottom: 6px;
                 }
+            }
+
+            .hamburgerContent {
+                height: 55px;
             }
 
             .overflowContent>:nth-child(4) {
