@@ -47,6 +47,7 @@ $button-color: #5656a7;
         .navbar {
             justify-content: space-between;
             width: 100%;
+            align-items: center;
 
             h3:hover {
                 font-weight: 500;
@@ -72,9 +73,16 @@ $button-color: #5656a7;
 
 
             }
+
+
         }
+
+
     }
 }
+
+
+
 
 // Intro
 
@@ -356,7 +364,7 @@ $button-color: #5656a7;
         gap: 20px 50px;
         align-items: flex-start;
 
-        width: 50%;
+        width: 65%;
 
         .skills-content-column {
             display: flex;
@@ -374,7 +382,7 @@ $button-color: #5656a7;
 
             .collapsible {
                 position: absolute;
-                top: 20px;
+                top: 8px;
                 right: 2px;
             }
 
@@ -394,7 +402,7 @@ $button-color: #5656a7;
             .content {
                 padding: 0 18px;
                 max-height: 0;
-                height: 250px;
+                height: auto;
                 overflow: hidden;
                 transition: max-height 0.2s ease-out;
 
@@ -404,12 +412,10 @@ $button-color: #5656a7;
 
                 .w3-light-grey {
                     background-color: #f2f7f7 !important;
-                    // padding-top: 20px;
                     border-radius: none;
 
                     .content-detail {
 
-                        // border: 2px solid black !important;
                         .w3-container {
                             border-radius: none;
                             height: 5px;
@@ -425,6 +431,10 @@ $button-color: #5656a7;
                         margin: 10px 0px;
                     }
                 }
+
+                // .w3-container.w3-blue.w3-round-xlarge {
+                //     width: 100% !important;
+                // }
             }
 
             .skill-name {
@@ -450,6 +460,7 @@ $button-color: #5656a7;
             }
 
         }
+
     }
 }
 
@@ -754,6 +765,9 @@ $button-color: #5656a7;
 
         margin-top: 120px;
 
+        .swiper-scrollbar {
+            display: none;
+        }
 
 
 
@@ -1053,48 +1067,102 @@ $button-color: #5656a7;
     }
 }
 
-.footer {
-    margin-top: 140px;
-    height: 150px;
-    // background: linear-gradient(180deg, rgba(66, 66, 99, 0.75), rgba(86, 86, 167, .75));
+.mainFooter {
 
-    background: linear-gradient(180deg, rgba(66, 66, 99, 1), rgba(81, 81, 189, 0.9));
+    .hamburgerContainer {
+        display: none;
 
-    .footerContainer {
-        padding: 20px;
-        flex-direction: row;
-        color: #f2f7f7;
 
-        .footerName {
-            width: 30%;
-            padding-left: 50px;
-            // text-align: center;
+        .hamburger {
+            z-index: 2000;
+            position: relative;
+            display: block;
+            width: 25px;
+            border: none;
+            appearance: none;
+            cursor: pointer;
         }
 
-        .footerLinks {
-            width: 70%;
-            text-align: center;
-            flex-direction: column;
+        .hamburger .bar,
+        .hamburger:after,
+        .hamburger:before {
+            content: "";
+            margin: 5px 0px;
+            display: block;
+            height: 5px;
+            width: 100%;
+            border: none;
+            background-color: black;
+            transition: 0.4s;
+        }
 
-            align-items: center;
+        .hamburger.is-active:before {
+            transform: rotate(-45deg) translate(-6px, 6px);
+        }
 
-            .icons {
-                margin: 10px 10px;
+        .hamburger.is-active:after {
+            transform: rotate(45deg) translate(-8px, -8px);
+        }
 
-                i {
-                    scale: 1.5;
-                    margin: 0px 20px;
+        .hamburger.is-active .bar {
+            opacity: 0;
+        }
+
+    }
+
+    .footer {
+        margin-top: 140px;
+        height: 150px;
+        // background: linear-gradient(180deg, rgba(66, 66, 99, 0.75), rgba(86, 86, 167, .75));
+
+        background: linear-gradient(180deg, rgba(66, 66, 99, 1), rgba(81, 81, 189, 0.9));
+
+
+
+        .footerContainer {
+            padding: 20px;
+            flex-direction: row;
+            color: #f2f7f7;
+
+            .footerName {
+                width: 30%;
+                padding-left: 50px;
+                // text-align: center;
+            }
+
+            .footerLinks {
+                width: 70%;
+
+                .footerDesktop {
+                    text-align: center;
+                    flex-direction: column;
+
+                    align-items: center;
+
+                    .icons {
+                        margin: 10px 10px;
+
+                        i {
+                            scale: 1.5;
+                            margin: 0px 20px;
+                        }
+                    }
+
+                    li {
+                        cursor: pointer;
+                        padding: 0px 10px;
+                        text-decoration: none;
+                        list-style: none;
+                    }
                 }
+
             }
 
-            li {
-                cursor: pointer;
-                padding: 0px 10px;
-                text-decoration: none;
-                list-style: none;
-            }
+
+
         }
     }
+
 }
 
 @media screen and (max-width: 1100px) {
@@ -1216,6 +1284,7 @@ $button-color: #5656a7;
     .skills {
         .skills-content {
             grid-template-columns: 1fr;
+            width: 50%;
 
             .skills-content-column {
                 gap: 20px;
@@ -1311,8 +1380,14 @@ $button-color: #5656a7;
         font-size: 17px;
     }
 
+    .header {
+        display: none !important;
+    }
+
     .intro {
         .mainSection {
+            margin-top: 20px;
+
             .portfolio {
                 .info {
                     h1 {
@@ -1354,6 +1429,8 @@ $button-color: #5656a7;
     }
 
     .asses {
+        margin-bottom: 30px !important;
+
         .assesContainer {
             .assesments {
                 grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) !important;
@@ -1366,17 +1443,185 @@ $button-color: #5656a7;
         }
     }
 
-    .footer {
-        .footerContainer {
-            .footerName {
-                display: none;
+    .mainFooter {
+        z-index: 200;
+        // overflow: visible;
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+
+        .hamburgerContainer {
+            position: relative;
+            display: block !important;
+            height: auto;
+            width: 100%;
+            background-color: #f2f7f7;
+            align-content: center;
+            // To make it not visible inside the container
+            //If we put it false then we will see its already visible
+            overflow: hidden;
+            transition: overflow 1s ease-in-out;
+
+            .overflowContent {
+
+                background-color: #f2f7f7;
+                //We can give it here on when the class is added which enables overflow
+                // height: 125px;
+                width: 100%;
+                // To make it not take space within container
+                max-height: 0px;
+                // max-width: 0px;
+                //To make it not visible within the container
+                //If we put it false then we will see its already visible
+                // position: absolute; 
+                // Instead of absolute we can also use this
+                transform: translateY(-300px);
+                // top: -20px;
+                // left: 0px;
+                bottom: 60px; //To make it not visible
             }
 
-            .footerLinks {
+            .hamburgerContent {
+                padding: 0px 10px;
+                height: 90%;
+                justify-content: space-between;
+                align-items: center;
+
+                .hamburger {
+                    padding: 5px;
+                    height: 35px;
+                    width: 35px;
+
+                }
+            }
+
+            .hamburger .bar,
+            .hamburger:after,
+            .hamburger:before {
+                content: "";
+                margin: 5px 0px;
+                display: block;
+                height: 5px;
                 width: 100%;
+                border: none;
+                background-color: black;
+                transition: 0.4s;
+            }
+
+            .hamburger.is-active:before {
+                transform: rotate(-45deg) translate(-6px, 6px);
+            }
+
+            .hamburger.is-active:after {
+                transform: rotate(45deg) translate(-8px, -8px);
+            }
+
+            .hamburger.is-active .bar {
+                opacity: 0;
+            }
+
+
+
+        }
+
+        .hamburgerContainer.activeHamburger {
+            overflow: visible;
+            transition: 2s;
+
+            .overflowContent {
+                padding: 20px;
+                display: grid !important;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px 20px;
+                justify-items: center;
+                height: 150px;
+                // background-color: #404040;
+                transform: translateY(-20px); //We can also use transfrom translate
+                bottom: 35px;
+                display: block;
+                max-height: 250px;
+                text-align: center;
+
+                div {
+                    cursor: pointer;
+                }
+
+                i {
+                    margin-bottom: 6px;
+                }
+            }
+
+            .overflowContent>:nth-child(4) {
+                grid-column: 2 / span 1;
             }
         }
 
+        .footer {
+            display: none;
+        }
+    }
+
+
+}
+
+
+
+@media screen and (max-width:650px) {
+    .header {
+        // padding: 10px 0px;
+
+        .headerContainer {
+
+            .navbar {
+                h3 {
+                    font-size: 18px !important;
+                }
+
+                .flex {
+                    li {
+                        letter-spacing: -0.5px;
+                        padding: 0px 5px;
+                    }
+                }
+
+                .name {
+                    display: none;
+                }
+
+                align-items: center;
+
+                flex-direction: column;
+            }
+
+        }
+    }
+
+    .footer {
+        .footerContainer {
+
+            .footerLinks {
+                li {
+                    padding: 0px 5px;
+                }
+
+                h3 {
+                    font-size: 18px !important;
+                }
+
+            }
+        }
+
+    }
+
+    .skills {
+        .skills-content {
+            grid-template-columns: 1fr;
+            width: 90%;
+
+            .skills-content-column {
+                gap: 20px;
+            }
+        }
     }
 }
 
@@ -1441,54 +1686,6 @@ $button-color: #5656a7;
     }
 
 
-}
-
-@media screen and (max-width:650px) {
-    .header {
-        // padding: 10px 0px;
-
-        .headerContainer {
-
-            .navbar {
-                h3 {
-                    font-size: 18px !important;
-                }
-
-                .flex {
-                    li {
-                        letter-spacing: -0.5px;
-                        padding: 0px 5px;
-                    }
-                }
-
-                .name {
-                    display: none;
-                }
-
-                align-items: center;
-
-                flex-direction: column;
-            }
-
-        }
-    }
-
-    .footer {
-        .footerContainer {
-
-            .footerLinks {
-                li {
-                    padding: 0px 5px;
-                }
-
-                h3 {
-                    font-size: 18px !important;
-                }
-
-            }
-        }
-
-    }
 }
 
 //for carasoul

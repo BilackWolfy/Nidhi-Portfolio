@@ -38,6 +38,16 @@ import 'swiper/css/scrollbar';
 // Import Swiper styles
 import 'swiper/css';
 
+const navAbout = () => {
+    const aboutID = document.getElementById('aboutID');
+    var headerOffset = 45;
+    var elementPosition = aboutID.getBoundingClientRect().top;
+    var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    window.scrollTo({
+        top: offsetPosition,
+    });
+}
+
 const Intro = () => {
     return <div className="intro container" id="homeID">
         <div className="mainSection grid">
@@ -51,13 +61,14 @@ const Intro = () => {
                     <div>
                         <h1 className="pd-y">Hi, I'am Nidhi</h1>
                         <h3 className="pd-y">Instructional Designer</h3>
-                        <p className="pd-y desc">High level experience in instructional designing and development, producing quality work</p>
+                        <p className="pd-y desc">Experienced instructional designer dedicated to consistently delivering high-quality, impactful learning experiences.
+                        </p>
                         <a href="" className="pd-y">Contact Me</a>
                     </div>
                     <div className="flex scroll" onClick={() => window.scrollBy(0, 700)} >
                         <i className="fa-solid fa-computer-mouse fa-2x" ></i>
                         <p>Scroll down</p>
-                        <i className="fa-solid fa-arrow-down" onClick={() => window.scrollBy(0, 700)}></i>
+                        <i className="fa-solid fa-arrow-down" onClick={() => navAbout('aboutID')}></i>
                     </div>
                 </div>
                 <div className="pic">
@@ -66,8 +77,8 @@ const Intro = () => {
                     </div>
                 </div>
             </section>
-        </div>
-    </div>
+        </div >
+    </div >
 }
 
 
@@ -96,38 +107,219 @@ const Skills = () => {
     }
 
     const collapsibleItem = () => {
+        //         Curriculum Development
+        // E-Learning Design
+        // Needs Assessment
+        // Instructional Design Models
+        // Multimedia Integration
+        // Assessment Design
+        // Quality Assurance
         return (
             <div className="content">
                 <div className="w3-light-grey w3-round-xlarge">
                     <div className="content-detail">
                         <div className="flex">
-                            <p>Figma</p>
-                            <p>75%</p>
+                            <p>Curriculum Development</p>
+                            <p>95%</p>
                         </div>
-                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '75%' }} />
+                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '95%' }} />
                     </div>
                 </div>
                 <div className="w3-light-grey w3-round-xlarge">
                     <div className="content-detail">
                         <div className="flex">
-                            <p>Figma</p>
-                            <p>75%</p>
+                            <p>E-Learning Design</p>
+                            <p>90%</p>
                         </div>
-                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '75%' }} />
+                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '90%' }} />
                     </div>
                 </div>
                 <div className="w3-light-grey w3-round-xlarge">
                     <div className="content-detail">
                         <div className="flex">
-                            <p>Figma</p>
+                            <p>Instructional Design Models</p>
+                            <p>90%</p>
+                        </div>
+                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '90%' }} />
+                    </div>
+                </div>
+                <div className="w3-light-grey w3-round-xlarge">
+                    <div className="content-detail">
+                        <div className="flex">
+                            <p>Multimedia Integration</p>
                             <p>75%</p>
                         </div>
-                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '75%' }} />
+                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '90%' }} />
+                    </div>
+                </div>
+                <div className="w3-light-grey w3-round-xlarge">
+                    <div className="content-detail">
+                        <div className="flex">
+                            <p>Assessment Design</p>
+                            <p>90%</p>
+                        </div>
+                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '95%' }} />
+                    </div>
+                </div>
+                <div className="w3-light-grey w3-round-xlarge">
+                    <div className="content-detail">
+                        <div className="flex">
+                            <p>Quality Assurance</p>
+                            <p>100%</p>
+                        </div>
+                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '100%' }} />
                     </div>
                 </div>
             </div>
         )
     }
+
+    const collapsibleItemTwo = () => {
+        // Learning Management Systems (LMS)
+        // Graphic Design Software
+        // Content Authoring Tools
+        // Project Management
+        // Data Analysis
+        // Technology Integration
+        return (
+            <div className="content">
+                <div className="w3-light-grey w3-round-xlarge">
+                    <div className="content-detail">
+                        <div className="flex">
+                            <p>Learning Management Systems</p>
+                            <p>75%</p>
+                        </div>
+                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '75%' }} />
+                    </div>
+                </div>
+                <div className="w3-light-grey w3-round-xlarge">
+                    <div className="content-detail">
+                        <div className="flex">
+                            <p>Graphic Design Software</p>
+                            <p>80%</p>
+                        </div>
+                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '80%' }} />
+                    </div>
+                </div>
+                <div className="w3-light-grey w3-round-xlarge">
+                    <div className="content-detail">
+                        <div className="flex">
+                            <p>Content Authoring Tools</p>
+                            <p>75%</p>
+                        </div>
+                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '75%' }} />
+                    </div>
+                </div>
+                <div className="w3-light-grey w3-round-xlarge">
+                    <div className="content-detail">
+                        <div className="flex">
+                            <p>Project Management</p>
+                            <p>90%</p>
+                        </div>
+                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '90%' }} />
+                    </div>
+                </div>
+                <div className="w3-light-grey w3-round-xlarge">
+                    <div className="content-detail">
+                        <div className="flex">
+                            <p>Data Analysis</p>
+                            <p>90%</p>
+                        </div>
+                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '90%' }} />
+                    </div>
+                </div>
+                <div className="w3-light-grey w3-round-xlarge">
+                    <div className="content-detail">
+                        <div className="flex">
+                            <p>Technology Integration</p>
+                            <p>85%</p>
+                        </div>
+                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '85%' }} />
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
+    const collapsibleItemThree = () => {
+
+        // Team Collaboration
+        // Time Management
+        // Adaptability
+        // Problem-Solving
+        // Creativity
+        // Feedback Incorporation
+        // Communication Skills
+        return (
+            <div className="content">
+                <div className="w3-light-grey w3-round-xlarge">
+                    <div className="content-detail">
+                        <div className="flex">
+                            <p>Team Collaboration</p>
+                            <p>100%</p>
+                        </div>
+                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '100%' }} />
+                    </div>
+                </div>
+                <div className="w3-light-grey w3-round-xlarge">
+                    <div className="content-detail">
+                        <div className="flex">
+                            <p>Time Management</p>
+                            <p>100%</p>
+                        </div>
+                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '100%' }} />
+                    </div>
+                </div>
+                <div className="w3-light-grey w3-round-xlarge">
+                    <div className="content-detail">
+                        <div className="flex">
+                            <p>Adaptability</p>
+                            <p>100%</p>
+                        </div>
+                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '100%' }} />
+                    </div>
+                </div>
+                <div className="w3-light-grey w3-round-xlarge">
+                    <div className="content-detail">
+                        <div className="flex">
+                            <p>Problem-Solving</p>
+                            <p>100%</p>
+                        </div>
+                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '100%' }} />
+                    </div>
+                </div>
+                <div className="w3-light-grey w3-round-xlarge">
+                    <div className="content-detail">
+                        <div className="flex">
+                            <p>Creativity</p>
+                            <p>100%</p>
+                        </div>
+                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '100%' }} />
+                    </div>
+                </div>
+                <div className="w3-light-grey w3-round-xlarge">
+                    <div className="content-detail">
+                        <div className="flex">
+                            <p>Feedback Incorporation</p>
+                            <p>100%</p>
+                        </div>
+                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '100%' }} />
+                    </div>
+                </div>
+                <div className="w3-light-grey w3-round-xlarge">
+                    <div className="content-detail">
+                        <div className="flex">
+                            <p>Communication Skills</p>
+                            <p>100%</p>
+                        </div>
+                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '100%' }} />
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
+
     return (
         <>
             <section className="container skills flex" id="skillsID">
@@ -137,46 +329,46 @@ const Skills = () => {
                 </div>
                 <div className="skills-content grid">
                     <div className="skills-content-column">
-                        <div className="skill grid">
+                        <div className="skill grid instructional">
                             <div className="skill-name">
                                 <div className="flex">
                                     <i className="fa-solid fa-swatchbook fa-lg"></i>
                                     <div className="skill-summary">
-                                        <p className="skill-heading">Skill #1</p>
-                                        <p className="skill-exp">More than 2 years</p>
+                                        <p className="skill-heading">Instructional Design</p>
+                                        {/* <p className="skill-exp">More than 2 years</p> */}
                                     </div>
                                 </div>
                             </div>
                             <i className="fa-solid fa-angle-down collapsible" onClick={(event) => handleCollapsible(event, 'first')}></i>
                             {collapsibleItem()}
                         </div>
-                        <div className="skill grid">
+                        <div className="skill grid technical">
                             <div className="skill-name">
                                 <div className="flex">
                                     <i className="fa-solid fa-swatchbook fa-lg"></i>
                                     <div className="skill-summary">
-                                        <p className="skill-heading">Skill #1</p>
-                                        <p className="skill-exp">More than 2 years</p>
+                                        <p className="skill-heading">Technical Skills</p>
+                                        {/* <p className="skill-exp">More than 2 years</p> */}
                                     </div>
                                 </div>
                             </div>
                             <i className="fa-solid fa-angle-down collapsible" onClick={(event) => handleCollapsible(event, 'second')}></i>
-                            {collapsibleItem()}
+                            {collapsibleItemTwo()}
                         </div>
                     </div>
                     <div>
-                        <div className="skill grid">
+                        <div className="skill grid soft-skills">
                             <div className="skill-name">
                                 <div className="flex">
                                     <i className="fa-solid fa-swatchbook fa-lg"></i>
                                     <div className="skill-summary">
-                                        <p className="skill-heading">Skill #1</p>
-                                        <p className="skill-exp">More than 2 years</p>
+                                        <p className="skill-heading">Soft Skills</p>
+                                        {/* <p className="skill-exp">More than 2 years</p> */}
                                     </div>
                                 </div>
                             </div>
                             <i className="fa-solid fa-angle-down collapsible" onClick={(event) => handleCollapsible(event, 'third')}></i>
-                            {collapsibleItem()}
+                            {collapsibleItemThree()}
                         </div>
                     </div>
 
@@ -434,7 +626,7 @@ const Portfolio = () => {
         return (
             <section className="container portfolioVideos flex">
                 <div className="portfolioVideosHeading flex">
-                    <p>Videos</p>
+                    <p>Instructional Videos</p>
                 </div>
                 <div className="videosContainer">
                     <div className="portfoldioVideos-videos">
@@ -472,7 +664,7 @@ const Portfolio = () => {
         return (
             <section className="container flex asses">
                 <div className="asessheading flex">
-                    <p>Asessment</p>
+                    <p>Asessments</p>
                 </div>
                 <div className="assesContainer">
                     <div className="assesments">
@@ -506,15 +698,7 @@ const Portfolio = () => {
         )
     }
 
-    const navAbout = () => {
-        const aboutID = document.getElementById('aboutID');
-        var headerOffset = 45;
-        var elementPosition = aboutID.getBoundingClientRect().top;
-        var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-        window.scrollTo({
-            top: offsetPosition,
-        });
-    }
+
 
     const navSkills = () => {
         const element = document.getElementById('skillsID');
@@ -557,24 +741,7 @@ const Portfolio = () => {
 
 
 
-    const Header = () => {
-        return (<>
-            <header className="header flex">
-                <div className="headerContainer flex">
-                    <nav className="navbar flex">
-                        <h3 className="name">Nidhi</h3>
-                        <ul className="flex">
-                            <li onClick={navHome}><h3>Home</h3></li>
-                            <li onClick={navAbout}><h3>About</h3></li>
-                            <li onClick={navSkills}><h3>Skills</h3></li>
-                            <li onClick={navQualification}><h3>Qualification</h3></li>
-                            <li onClick={navPortfolio}><h3>Portfolio</h3></li>
-                        </ul>
-                    </nav>
-                </div>
-            </header>
-        </>)
-    }
+
 
 
     const About = () => {
@@ -613,15 +780,93 @@ const Portfolio = () => {
         )
     }
 
+    const [expandedHamburger, setExpandedHamburger] = useState('')
+    const handleHamburger = (event) => {
+        event.stopPropagation();
+        if (expandedHamburger === '') {
+            setExpandedHamburger('activeHamburger')
+        } else {
+            setExpandedHamburger('')
+        }
+
+        if (hamburgerActive === '') {
+            setHamburger('is-active')
+        } else {
+            setHamburger('');
+        }
+    }
+
     const Footer = () => {
         return (
-            <section className="footer">
-                <div className="footerContainer flex container">
-                    <div className="footerName">
-                        <h3>Nidhi</h3>
-                        <p>Instructional Designer</p>
+            <section className="mainFooter">
+                <div className={`hamburgerContainer flex ${expandedHamburger}`}>
+                    <div className="overflowContent">
+                        <div onClick={navHome}>
+                            <i className="fa-solid fa-house fa-2x"></i>
+                            <p>Home</p>
+                        </div>
+                        <div onClick={navAbout}>
+                            <i className="fa-solid fa-user fa-2x"></i>
+                            <p>About</p>
+                        </div>
+                        <div onClick={navSkills}>
+                            <i className="fa-solid fa-file-lines fa-2x"></i>
+                            <p>Skills</p>
+                        </div>
+                        <div onClick={navPortfolio}>
+                            <i className="fa-solid fa-panorama fa-2x"></i>
+                            <p>Portfolio</p>
+
+                        </div>
+
+
                     </div>
-                    <div className="footerLinks flex">
+                    <div className="hamburgerContent flex">
+                        <div>Nidhi</div>
+                        <div className={`hamburger ${hamburgerActive}`} onClick={(event) => handleHamburger(event)}>
+                            <div className="bar"></div>
+                        </div>
+                    </div>
+                </div>
+                <section className="footer">
+                    <div className="footerContainer flex container">
+                        <div className="footerName">
+                            <h3>Nidhi</h3>
+                            <p>Instructional Designer</p>
+                        </div>
+                        <div className="footerLinks ">
+                            <div className="footerDesktop flex">
+                                <ul className="flex">
+                                    <li onClick={navHome}><h3>Home</h3></li>
+                                    <li onClick={navAbout}><h3>About</h3></li>
+                                    <li onClick={navSkills}><h3>Skills</h3></li>
+                                    <li onClick={navQualification}><h3>Qualification</h3></li>
+                                    <li onClick={navPortfolio}><h3>Portfolio</h3></li>
+                                </ul>
+                                <div className="icons flex">
+                                    <i className="fa-brands fa-linkedin-in fa-1x"></i>
+                                    <i className="fa-brands fa-facebook fa-1x" ></i>
+                                    <i className="fa-brands fa-instagram fa-1x" ></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section >
+
+        )
+    }
+
+    const [hamburgerActive, setHamburger] = useState('');
+
+
+
+    const Header = () => {
+        return (<>
+            <header className="header flex">
+                <div className="headerContainer flex">
+                    <nav className="navbar flex">
+                        <h3 className="name">Nidhi</h3>
                         <ul className="flex">
                             <li onClick={navHome}><h3>Home</h3></li>
                             <li onClick={navAbout}><h3>About</h3></li>
@@ -629,18 +874,19 @@ const Portfolio = () => {
                             <li onClick={navQualification}><h3>Qualification</h3></li>
                             <li onClick={navPortfolio}><h3>Portfolio</h3></li>
                         </ul>
-                        <div className="icons flex">
-                            <i className="fa-brands fa-linkedin-in fa-1x"></i>
-                            <i className="fa-brands fa-facebook fa-1x" ></i>
-                            <i className="fa-brands fa-instagram fa-1x" ></i>
-                        </div>
-                    </div>
+                    </nav>
                 </div>
-            </section>
-        )
+            </header>
+        </>)
     }
-
-
+    document.body.addEventListener('click', () => {
+        if (expandedHamburger === 'activeHamburger') {
+            setExpandedHamburger('')
+        }
+        if (hamburgerActive === 'is-active') {
+            setHamburger('')
+        }
+    })
     return <>
         <Header />
         <Intro />
