@@ -1068,10 +1068,11 @@ $button-color: #5656a7;
 }
 
 .mainFooter {
+    height: 50px;
 
     .hamburgerContainer {
         display: none;
-
+        height: 100%;
 
         .hamburger {
             z-index: 2000;
@@ -1453,7 +1454,7 @@ $button-color: #5656a7;
         .hamburgerContainer {
             position: relative;
             display: block !important;
-            height: auto;
+            height: 100%;
             width: 100%;
             background-color: #f2f7f7;
             align-content: center;
