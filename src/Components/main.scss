@@ -1366,6 +1366,22 @@ $button-color: #5656a7;
 
         }
     }
+
+    .contactsModal {
+        height: 20% !important;
+
+        .contactsContainer {
+
+
+
+            .number,
+            .mail {
+                gap: 6px;
+                // gap: 10px;
+                flex-direction: column !important;
+            }
+        }
+    }
 }
 
 
@@ -1692,4 +1708,58 @@ $button-color: #5656a7;
 
 }
 
-//for carasoul
+.contactsModal {
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 100;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    width: auto;
+    margin: 0 auto;
+    background-color: #dddde6;
+    justify-content: center;
+
+    .fa-solid.fa-xmark {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+
+    .contactsContainer {
+        margin-top: 15px;
+
+        .field {
+            font-weight: 600;
+        }
+
+        p {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        // border: 1px solid gray;
+        // border-radius: 2px;
+
+        .number {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .mail {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+}

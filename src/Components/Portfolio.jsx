@@ -37,6 +37,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 // Import Swiper styles
 import 'swiper/css';
+import ContactsModal from "./ContactsModal";
 
 const navAbout = () => {
     const aboutID = document.getElementById('aboutID');
@@ -48,44 +49,18 @@ const navAbout = () => {
     });
 }
 
-const Intro = () => {
-    return <div className="intro container" id="homeID">
-        <div className="mainSection grid">
-            <section className="icons flex">
-                <i className="fa-brands fa-linkedin-in fa-2x"></i>
-                <i className="fa-brands fa-facebook fa-2x" ></i>
-                <i className="fa-brands fa-instagram fa-2x" ></i>
-            </section>
-            <section className="portfolio flex">
-                <div className="info flex">
-                    <div>
-                        <h1 className="pd-y">Hi, I'am Nidhi</h1>
-                        <h3 className="pd-y">Instructional Designer</h3>
-                        <p className="pd-y desc">Experienced instructional designer dedicated to consistently delivering high-quality, impactful learning experiences.
-                        </p>
-                        <a href="" className="pd-y">Contact Me</a>
-                    </div>
-                    <div className="flex scroll" onClick={() => window.scrollBy(0, 700)} >
-                        <i className="fa-solid fa-computer-mouse fa-2x" ></i>
-                        <p>Scroll down</p>
-                        <i className="fa-solid fa-arrow-down" onClick={() => navAbout('aboutID')}></i>
-                    </div>
-                </div>
-                <div className="pic">
-                    <div className="pic-image">
-                        <img src={panda} />
-                    </div>
-                </div>
-            </section>
-        </div >
-    </div >
-}
+
 
 
 const Skills = () => {
     const handleCollapsible = (event, order) => {
         event.target.classList.toggle('active');
+
         var content = event.target.nextElementSibling;
+        // if (div) {
+        //     event = document.getElementById('test');
+        //     content = event.nextElementSibling;
+        // }
         const collapsibleClasses = document.getElementsByClassName('collapsible');
         if (order === 'first') {
             collapsibleClasses[1].nextElementSibling.style.maxHeight = null;
@@ -325,9 +300,9 @@ const Skills = () => {
             <section className="container skills flex" id="skillsID">
                 <div className="skills-title flex">
                     <h1 id='sectionTitle'>Skills</h1>
-                    <p id="sectionSubtitle">My Technical Level</p>
+                    {/* <p id="sectionSubtitle">My Technical Level</p> */}
                 </div>
-                <div className="skills-content grid">
+                <div className="skills-content grid" >
                     <div className="skills-content-column">
                         <div className="skill grid instructional">
                             <div className="skill-name">
@@ -339,10 +314,10 @@ const Skills = () => {
                                     </div>
                                 </div>
                             </div>
-                            <i className="fa-solid fa-angle-down collapsible" onClick={(event) => handleCollapsible(event, 'first')}></i>
+                            <i className="fa-solid fa-angle-down collapsible" id='test' onClick={(event) => handleCollapsible(event, 'first')}></i>
                             {collapsibleItem()}
                         </div>
-                        <div className="skill grid technical">
+                        <div className="skill grid technical" >
                             <div className="skill-name">
                                 <div className="flex">
                                     <i className="fa-solid fa-swatchbook fa-lg"></i>
@@ -476,7 +451,7 @@ const Portfolio = () => {
             <section className="qualification container flex" id="qualificationID">
                 <div className="qualification-heading flex">
                     <h1 id='sectionTitle'>Qualification</h1>
-                    <p id="sectionSubtitle">My Technical Level</p>
+                    {/* <p id="sectionSubtitle">My Technical Level</p> */}
                 </div>
                 <div className="qualification-timeline grid">
                     <div className="qualification-title flex">
@@ -844,9 +819,9 @@ const Portfolio = () => {
                                     <li onClick={navPortfolio}><h3>Portfolio</h3></li>
                                 </ul>
                                 <div className="icons flex">
-                                    <i className="fa-brands fa-linkedin-in fa-1x"></i>
-                                    <i className="fa-brands fa-facebook fa-1x" ></i>
-                                    <i className="fa-brands fa-instagram fa-1x" ></i>
+                                    <i className="fa-brands fa-linkedin-in fa-1x" onClick={() => openLink('https://www.linkedin.com/in/nidhi-sharma-content-writer?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app')}></i>
+                                    {/* <i className="fa-brands fa-facebook fa-1x" ></i>
+                                    <i className="fa-brands fa-instagram fa-1x" ></i> */}
                                 </div>
                             </div>
                         </div>
@@ -887,6 +862,45 @@ const Portfolio = () => {
             setHamburger('')
         }
     })
+
+    const [modalOpen, setModalOpen] = useState(false)
+    const handleModal = (event) => {
+        event.preventDefault();
+        setModalOpen(true)
+    }
+    const Intro = () => {
+        return <div className="intro container" id="homeID">
+            <div className="mainSection grid">
+                <section className="icons flex">
+                    <i className="fa-brands fa-linkedin-in fa-2x" onClick={() => openLink('https://www.linkedin.com/in/nidhi-sharma-content-writer?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app')}></i>
+                    {/* <i className="fa-brands fa-facebook fa-2x" ></i>
+                    <i className="fa-brands fa-instagram fa-2x" ></i> */}
+                </section>
+                <section className="portfolio flex">
+                    <div className="info flex">
+                        {modalOpen && <ContactsModal setModalOpen={setModalOpen} />}
+                        <div>
+                            <h1 className="pd-y">Hi, I'am Nidhi</h1>
+                            <h3 className="pd-y">Instructional Designer</h3>
+                            <p className="pd-y desc">Experienced instructional designer dedicated to consistently delivering high-quality, impactful learning experiences.
+                            </p>
+                            <a href="" className="pd-y" onClick={(event) => handleModal(event)}>Contact Me</a>
+                        </div>
+                        <div className="flex scroll" onClick={() => window.scrollBy(0, 700)} >
+                            <i className="fa-solid fa-computer-mouse fa-2x" ></i>
+                            <p>Scroll down</p>
+                            <i className="fa-solid fa-arrow-down" onClick={() => navAbout('aboutID')}></i>
+                        </div>
+                    </div>
+                    <div className="pic">
+                        <div className="pic-image">
+                            <img src={panda} />
+                        </div>
+                    </div>
+                </section>
+            </div >
+        </div >
+    }
     return <>
         <Header />
         <Intro />
