@@ -42,7 +42,7 @@ import resume from '../Resume/NIDHI_RESUME.pdf'
 
 const navAbout = () => {
     const aboutID = document.getElementById('aboutID');
-    var headerOffset = 45;
+    var headerOffset = 100;
     var elementPosition = aboutID.getBoundingClientRect().top;
     var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
     window.scrollTo({
@@ -376,7 +376,7 @@ const Portfolio = () => {
                     <div className="content">
                         <h3>Bachelor of Technology</h3>
                         <p className="uni">Kurukshetra University</p>
-                        <p className="year"><i className="fa-solid fa-calendar-days"></i> 2018 - 2012</p>
+                        <p className="year"><i className="fa-solid fa-calendar-days"></i> 2008 - 2012</p>
                     </div>
                 </div>
                 <div className="container right">
@@ -678,7 +678,7 @@ const Portfolio = () => {
 
     const navSkills = () => {
         const element = document.getElementById('skillsID');
-        var headerOffset = 45;
+        var headerOffset = 100;
         var elementPosition = element.getBoundingClientRect().top;
         var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
         window.scrollTo({
@@ -688,7 +688,7 @@ const Portfolio = () => {
 
     const navQualification = () => {
         const element = document.getElementById('qualificationID');
-        var headerOffset = 45;
+        var headerOffset = 100;
         var elementPosition = element.getBoundingClientRect().top;
         var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
         window.scrollTo({
@@ -697,7 +697,7 @@ const Portfolio = () => {
     }
     const navHome = () => {
         const element = document.getElementById('homeID');
-        var headerOffset = 45;
+        var headerOffset = 100;
         var elementPosition = element.getBoundingClientRect().top;
         var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
         // element.scrollIntoView();
@@ -707,7 +707,7 @@ const Portfolio = () => {
     }
     const navPortfolio = () => {
         const element = document.getElementById('portfolioID');
-        var headerOffset = 45;
+        var headerOffset = 100;
         var elementPosition = element.getBoundingClientRect().top;
         var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
         window.scrollTo({
@@ -892,7 +892,7 @@ const Portfolio = () => {
                             </p>
                             <a href="" className="pd-y" onClick={(event) => handleModal(event)}>Contact Me</a>
                         </div>
-                        <div className="flex scroll" onClick={() => window.scrollBy(0, 700)} >
+                        <div className="flex scroll" onClick={() => navAbout('aboutID')} >
                             <i className="fa-solid fa-computer-mouse fa-2x" ></i>
                             <p>Scroll down</p>
                             <i className="fa-solid fa-arrow-down" onClick={() => navAbout('aboutID')}></i>
