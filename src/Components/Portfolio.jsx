@@ -38,6 +38,7 @@ import 'swiper/css/scrollbar';
 // Import Swiper styles
 import 'swiper/css';
 import ContactsModal from "./ContactsModal";
+import resume from '../Resume/NIDHI_RESUME.pdf'
 
 const navAbout = () => {
     const aboutID = document.getElementById('aboutID');
@@ -731,8 +732,7 @@ const Portfolio = () => {
                         <img src={panda2} />
                     </div>
                     <div className="about-exp">
-                        <p className="about-exp-text">Instructional designer with extensive knowledge and years of experience, working
-                            in eduction sector, delivering quality work
+                        <p className="about-exp-text">Instructional designer passionate about creating engaging learning experiences, with expertise in e-learning, curriculum, and ed-tech integration.
                         </p>
                         <div className="about-exp-details flex">
                             <div>
@@ -740,15 +740,21 @@ const Portfolio = () => {
                                 <p>Years experience</p>
                             </div>
                             <div>
-                                <p>08<i className="fa-solid fa-plus fa-xs"></i></p>
-                                <p>Years experience</p>
+                                <p>10<i className="fa-solid fa-plus fa-xs"></i></p>
+                                <p>Completed projects</p>
                             </div>
                             <div>
-                                <p>08<i className="fa-solid fa-plus fa-xs"></i></p>
-                                <p>Years experience</p>
+                                <p>03<i className="fa-solid fa-plus fa-xs"></i></p>
+                                <p>Companies worked</p>
                             </div>
                         </div>
-                        <a href="">Download CV</a>
+                        <a
+                            href={resume}
+                            download="Nidhi_resume"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Download CV
+                        </a>
                     </div>
                 </div>
             </section>
