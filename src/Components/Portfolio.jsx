@@ -42,7 +42,7 @@ import resume from '../Resume/NIDHI_RESUME.pdf'
 
 const navAbout = () => {
     const aboutID = document.getElementById('aboutID');
-    var headerOffset = 100;
+    var headerOffset = 60;
     var elementPosition = aboutID.getBoundingClientRect().top;
     var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
     window.scrollTo({
@@ -678,7 +678,7 @@ const Portfolio = () => {
 
     const navSkills = () => {
         const element = document.getElementById('skillsID');
-        var headerOffset = 100;
+        var headerOffset = 60;
         var elementPosition = element.getBoundingClientRect().top;
         var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
         window.scrollTo({
@@ -688,7 +688,7 @@ const Portfolio = () => {
 
     const navQualification = () => {
         const element = document.getElementById('qualificationID');
-        var headerOffset = 100;
+        var headerOffset = 60;
         var elementPosition = element.getBoundingClientRect().top;
         var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
         window.scrollTo({
@@ -697,7 +697,7 @@ const Portfolio = () => {
     }
     const navHome = () => {
         const element = document.getElementById('homeID');
-        var headerOffset = 100;
+        var headerOffset = 0;
         var elementPosition = element.getBoundingClientRect().top;
         var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
         // element.scrollIntoView();
@@ -707,7 +707,7 @@ const Portfolio = () => {
     }
     const navPortfolio = () => {
         const element = document.getElementById('portfolioID');
-        var headerOffset = 100;
+        var headerOffset = 60;
         var elementPosition = element.getBoundingClientRect().top;
         var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
         window.scrollTo({

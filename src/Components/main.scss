@@ -1565,6 +1565,8 @@ $button-color: #5656a7;
                 display: block;
                 max-height: 250px;
                 text-align: center;
+                transition: 2s;
+                transition-delay: 2s;
 
                 div {
                     cursor: pointer;
@@ -1750,8 +1752,6 @@ $button-color: #5656a7;
             margin-right: 15px;
         }
 
-        // border: 1px solid gray;
-        // border-radius: 2px;
 
         .number {
             overflow: hidden;
