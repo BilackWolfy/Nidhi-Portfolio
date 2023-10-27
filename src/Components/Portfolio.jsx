@@ -511,11 +511,11 @@ const Portfolio = () => {
                     onSwiper={(swiper) => console.log(swiper)}
                     onSlideChange={() => console.log('slide change')}
                 >
-                    <SwiperSlide>{slide(portfolioOne, 'Logos- Do They Matter??', 'Logo designs are all over, I check out around me now, and I can undoubtedly tally up at least 10 distinct logos easily…', one)}</SwiperSlide>
+                    <SwiperSlide>{slide(portfolioOne, 'Logos- Do They Matter??', 'Logo designs are all over, I check out around me now, and I can undoubtedly tally up at least…', one)}</SwiperSlide>
                     <SwiperSlide>{slide(portfolioTwo, '20 Most Astounding Facts...', 'Science encourages us to explore the world & the universe around us revealing some really unusual...', two)}</SwiperSlide>
                     <SwiperSlide>{slide(portfolioThree, 'I am a Teacher who writes...', 'Life is an act of juggling and I am juggling with 2 balls in my hands...', three)}</SwiperSlide>
                     <SwiperSlide>{slide(portfolioFour, 'Agile Certification', 'Agile is a versatile approach of project management that focuses on delivering value...', four)}</SwiperSlide>
-                    <SwiperSlide>{slide(portfolioSix, '2019 Eclipse South America', 'Chile has established itself as a worldwide capital for astrotourism since it has the best skies for stargazing...', six)}</SwiperSlide>
+                    <SwiperSlide>{slide(portfolioSix, '2019 Eclipse South America', 'Chile has established itself as a worldwide capital for astrotourism since it has the best skies...', six)}</SwiperSlide>
                 </Swiper>
             )
         }
